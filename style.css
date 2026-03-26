@@ -1,0 +1,26 @@
+body { font-family: 'Times New Roman'; background: #f0f0f0; padding: 40px; }
+.main-header {
+  display: flex;                  /* makes header a flex container */
+  justify-content: center; /* pushes items to edges */
+  align-items: center;            /* vertically centers text and logo */
+  position: center;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: #f7c948;      /* nice yellow header */
+  color: rgb(232, 11, 11);
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 10px;
+}
+.header-logo {
+  height: 80px;   /* adjust the logo size */
+  width: auto;    /* maintain aspect ratio */
+position: absolute;
+right: 50px;
+}
+.grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.card { background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 10px solid; }
+.yellow { border-top-color: #ffc107; }
+.orange { border-top-color: #ff9800; }
+.red { border-top-color: #f44336; }
+a { color: #b8860b; text-decoration: none; font-weight: bold; display: block; margin-top: 10px; }
