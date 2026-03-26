@@ -20,5 +20,30 @@
         <div class="card red"><h3>Safety & Security</h3><a href="#">Open Checklist</a></div>
         <div class="card yellow"><h3>Personal Hygiene</h3><a href="#">Open Checklist</a></div>
     </div>
+<!-- JS for toggling PDF -->
+  <script>
+    function togglePDF(filename) {
+      const container = document.getElementById(filename);
+
+      // Embed PDF if not already embedded
+      if (container.innerHTML === "") {
+        container.innerHTML = `
+          <div style="text-align:right;">
+            <button class="close-btn" onclick="closePDF('${filename}')">Close PDF</button>
+          </div>
+          <iframe src="${filename}" width="100%" height="500px" style="border:none;"></iframe>
+        `;
+      }
+
+      // Toggle display
+      container.style.display = container.style.display === "none" ? "block" : "none";
+    }
+
+    function closePDF(filename) {
+      const container = document.getElementById(filename);
+      container.style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
